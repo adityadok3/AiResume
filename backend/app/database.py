@@ -6,6 +6,7 @@ from app.config import settings
 
 # Parse the database URL and set up connection arguments for SQLite if needed
 DATABASE_URL = settings.DATABASE_URL
+print("DATABASE_URL =", DATABASE_URL)
 
 connect_args = {}
 if DATABASE_URL.startswith("sqlite"):
