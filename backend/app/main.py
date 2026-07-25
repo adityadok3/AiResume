@@ -15,6 +15,12 @@ from app.config import settings
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title=settings.PROJECT_NAME)
+@app.get("/")
+def root():
+    return {
+        "message": "AI Resume API is running successfully!",
+        "docs": "/docs"
+    }
 
 # Enable CORS for Vite frontend
 app.add_middleware(
